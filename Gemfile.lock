@@ -1,0 +1,71 @@
+GIT
+  remote: git://github.com/sinatra/sinatra.git
+  revision: 91bce0b4b7857eaead6636db577be5c65aa1399d
+  specs:
+    sinatra (1.4.0)
+      rack (~> 1.3, >= 1.3.6)
+      rack-protection (~> 1.2)
+      tilt (~> 1.3, >= 1.3.3)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    active_support (3.0.0)
+      activesupport (= 3.0.0)
+    activesupport (3.0.0)
+    alphasights-sinatra-sprockets (0.1.1)
+      sprockets (~> 2.0)
+    celluloid (0.11.1)
+      timers (>= 1.0.0)
+    celluloid-io (0.11.0)
+      celluloid (~> 0.11.0)
+      nio4r (>= 0.4.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.3.3)
+    daemons (1.1.8)
+    eventmachine (0.12.10)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    gazouillis (0.0.1)
+      celluloid-io
+      http_parser.rb
+    hike (1.2.1)
+    http_parser.rb (0.5.3)
+    multi_json (1.3.6)
+    newrelic_rpm (3.4.0.1)
+    nio4r (0.4.0)
+    rack (1.4.1)
+    rack-protection (1.2.0)
+      rack
+    sprockets (2.4.5)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sucreries (0.0.2)
+      sprockets
+    thin (1.4.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+    tilt (1.3.3)
+    timers (1.0.1)
+    uglifier (1.2.6)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  active_support
+  alphasights-sinatra-sprockets
+  coffee-script
+  gazouillis
+  newrelic_rpm
+  sinatra!
+  sucreries
+  thin
+  uglifier
