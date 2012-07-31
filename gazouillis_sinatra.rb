@@ -16,8 +16,8 @@ class GazoullisSinatra < Sinatra::Base
     $redis = Redis.new(host: redis_uri.host, port: redis_uri.port, password: redis_uri.password)
   else
     $redis = Redis.new
-    $redis.del "tweets_count"
   end
+  $redis.del "tweets_count"
 
   configure :production do
     require 'newrelic_rpm'
