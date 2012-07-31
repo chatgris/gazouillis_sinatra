@@ -39,6 +39,7 @@ GEM
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
+    redis (3.0.1)
     sprockets (2.4.5)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -65,6 +66,7 @@ DEPENDENCIES
   coffee-script
   gazouillis
   newrelic_rpm
+  redis
   sinatra!
   sucreries
   thin

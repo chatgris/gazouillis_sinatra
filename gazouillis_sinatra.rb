@@ -11,6 +11,13 @@ class GazoullisSinatra < Sinatra::Base
   helpers Sinatra::Sprockets::Helpers
   set :server, :thin
   $listeners = Connections.new
+  if ENV["REDISTOGO_URL"]
+    redis_uri = URI.parse(ENV["REDISTOGO_URL"])
+    $redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.passwor)
+  else
+    $redis = Redis.new
+    $redis.del "tweets_count"
+  end
 
   configure :production do
     require 'newrelic_rpm'
@@ -36,6 +43,7 @@ class GazoullisSinatra < Sinatra::Base
   end
 
   get '/' do
+    @tweets_count = $redis.get('tweets_count').to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
     erb :index
   end
 
