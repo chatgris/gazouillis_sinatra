@@ -13,7 +13,7 @@ class GazoullisSinatra < Sinatra::Base
   $listeners = Connections.new
   if ENV["REDISTOGO_URL"]
     redis_uri = URI.parse(ENV["REDISTOGO_URL"])
-    $redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.passwor)
+    $redis = Redis.new(host: redis_uri.host, port: redis_uri.port, password: redis_uri.password)
   else
     $redis = Redis.new
     $redis.del "tweets_count"
