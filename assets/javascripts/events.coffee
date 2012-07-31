@@ -1,6 +1,6 @@
 source = new EventSource('/events')
 
-template = _.template "<li><%=user.screen_name%> : <%=text%></li>"
+template = _.template "<div class='well'><%=user.screen_name%> : <%=text%></div>"
 
 source.addEventListener 'open', (event) ->
   console.log 'connected'
