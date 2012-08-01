@@ -44,6 +44,7 @@ class GazoullisSinatra < Sinatra::Base
 
   get '/' do
     @tweets_count = $redis.get('tweets_count').to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
+    @tweets_total = $redis.get('tweets_total').to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
     erb :index
   end
 
