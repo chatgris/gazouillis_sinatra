@@ -30,7 +30,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     facter (1.6.13)
-    gazouillis (0.0.1)
+    gazouillis (0.0.2)
       celluloid-io
       http_parser.rb
     hike (1.2.1)

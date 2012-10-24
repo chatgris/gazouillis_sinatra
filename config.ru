@@ -15,7 +15,7 @@ gazouillis_options = {
   auth:
   {
     user: ENV['TWITTER_USER'],
-    passord: ENV['TWITTER_PASS']
+    password: ENV['TWITTER_PASS']
   }
 }
 Tweets.new('/1/statuses/sample.json', gazouillis_options).open!
